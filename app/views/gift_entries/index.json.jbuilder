@@ -1,0 +1,1 @@
+json.array! @gift_entries, partial: 'gift_entries/gift_entry', as: :gift_entry

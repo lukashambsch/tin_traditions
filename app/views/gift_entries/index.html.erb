@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gift Entries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Received date</th>
+      <th>Contents</th>
+      <th>Message</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gift_entries.each do |gift_entry| %>
+      <tr>
+        <td><%= gift_entry.received_date %></td>
+        <td><%= gift_entry.contents %></td>
+        <td><%= gift_entry.message %></td>
+        <td><%= link_to 'Show', gift_entry %></td>
+        <td><%= link_to 'Edit', edit_gift_entry_path(gift_entry) %></td>
+        <td><%= link_to 'Destroy', gift_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gift Entry', new_gift_entry_path %>

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pin</th>
+      <th>Serial number</th>
+      <th>Order number</th>
+      <th>Purchase date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tins.each do |tin| %>
+      <tr>
+        <td><%= tin.pin %></td>
+        <td><%= tin.serial_number %></td>
+        <td><%= tin.order_number %></td>
+        <td><%= tin.purchase_date %></td>
+        <td><%= link_to 'Show', tin %></td>
+        <td><%= link_to 'Edit', edit_tin_path(tin) %></td>
+        <td><%= link_to 'Destroy', tin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tin', new_tin_path %>

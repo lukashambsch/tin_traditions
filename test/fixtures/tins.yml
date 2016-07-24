@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pin: MyString
+  serial_number: MyString
+  purchase_date: 2016-07-24
+  order_number: MyString
+
+two:
+  pin: MyString
+  serial_number: MyString
+  purchase_date: 2016-07-24
+  order_number: MyString

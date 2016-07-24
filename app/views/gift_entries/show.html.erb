@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Received date:</strong>
+  <%= @gift_entry.received_date %>
+</p>
+
+<p>
+  <strong>Contents:</strong>
+  <%= @gift_entry.contents %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @gift_entry.message %>
+</p>
+
+<%= link_to 'Edit', edit_gift_entry_path(@gift_entry) %> |
+<%= link_to 'Back', gift_entries_path %>

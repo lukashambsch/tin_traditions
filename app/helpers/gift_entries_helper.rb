@@ -1,0 +1,2 @@
+module GiftEntriesHelper
+end

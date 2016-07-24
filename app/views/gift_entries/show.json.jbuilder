@@ -1,0 +1,1 @@
+json.partial! "gift_entries/gift_entry", gift_entry: @gift_entry

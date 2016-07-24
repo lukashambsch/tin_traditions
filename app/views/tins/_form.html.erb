@@ -1,0 +1,37 @@
+<%= form_for(tin) do |f| %>
+  <% if tin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tin.errors.count, "error") %> prohibited this tin from being saved:</h2>
+
+      <ul>
+      <% tin.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pin %>
+    <%= f.text_field :pin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :serial_number %>
+    <%= f.text_field :serial_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :order_number %>
+    <%= f.text_field :order_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :purchase_date %>
+    <%= f.date_select :purchase_date %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
